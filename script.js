@@ -343,7 +343,7 @@ function flattenUp(bda) {
       p.Saver[1] = (p.Saver[0] + 1) % bda;
     }
         if (p.Sense[0] == bda) {
-p.Sense=kodkod    } 
+p.Sense[0]=kodkod    } 
   }
 
   origin();
