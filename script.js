@@ -77,7 +77,7 @@ break        }
     p.ST[1][1] = 0;
     let pod = 0;
     for (let i=0;i<p.HyperFacts[0].length;i++)  
-    {p.ST[1][1] += p.HyperFacts[0][i];
+    {p.ST[1][1] += p.HyperFacts[0][i]*(8-i);
       p.ST[1][1] *= Math.max(Math.log(p.HyperFacts[0][i]), 1);
       pod += p.HyperFacts[0][i];}
     p.ST[1][1] **= pod / 2;
@@ -128,8 +128,6 @@ var autoAttack = window.setInterval(function() {
       p.ST[1][0] = -Infinity;
       p.win = 1;
       document.getElementById("0th").innerHTML = "You may go";
-      p.ST[2][0] = Math.max(p.ST[2][0], p.ST[1][0]);
-      p.ST[2][1] = Math.max(p.ST[2][1], p.ST[1][1]);
       for (let i = 0; i < p.HyperFacts[0].length + 1; i++) {
         p.HyperFacts[1][i] +=
           Math.max(
