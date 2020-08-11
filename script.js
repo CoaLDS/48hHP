@@ -60,7 +60,7 @@ function updateArea() {
     console.log(p.HyperFacts[0][p.Sense[0]] != Math.sign(p.HyperFacts[0][p.Sense[0]])*p.HyperFacts[0][p.Sense[0]])
     if (p.HyperFacts[0][p.Sense[0]] != Math.sign(p.HyperFacts[0][p.Sense[0]])*p.HyperFacts[0][p.Sense[0]]){
               p.HyperFacts[0][p.Sense[0]]+=9-p.HyperFacts[0].length
-      for (let i=0; i<p.HyperFacts[0].length;--i){
+      for (let i=0; i<p.HyperFacts[0].length;i++){
         p.HyperFacts[0][p.Sense[0]]-=1
         if (updateEST(p.HyperFacts[0][0],p.HyperFacts[0][1],p.HyperFacts[0][2],p.HyperFacts[0][3],p.HyperFacts[0][4],p.HyperFacts[0][5],p.HyperFacts[0][6])<=p.ST[2][0]){
                   p.HyperFacts[0][p.Sense[0]]+=1
